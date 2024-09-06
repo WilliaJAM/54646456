@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Productos</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>Registro de Productos</h1>
+    <form id="productForm">
+        <label for="productName">Nombre del Producto:</label>
+        <input type="text" id="productName" required>
+        <br>
+        <label for="productPrice">Precio:</label>
+        <input type="number" id="productPrice" required>
+        <br>
+        <label for="discount">Descuento (%) :</label>
+        <input type="number" id="discount" required>
+        <br>
+        <button type="submit">Agregar Producto</button>
+    </form>
+
+    <h2>Lista de Productos</h2>
+    <table id="productTable">
+        <thead>
+            <tr>
+                <th>Producto</th>
+                <th>Precio</th>
+                <th>Descuento %</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        </tbody>
+    </table>
+
+    <script>
+        document.getElementById('productForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita el envío del formulario
+
+            // Obtiene los valores del formulario
+            const productName = document.getElementById('productName').value;
+            const productPrice = parseFloat(document.getElementById('productPrice').value);
+            const discount = parseFloat(document.getElementById('discount').value);
+
+            // Calcula el total después del descuento
+            const total = productPrice - (productPrice * discount / 100);
+
+            // Crea una nueva fila para la tabla
+            const table = document.getElementById('productTable').getElementsByTagName('tbody')[0];
+            const newRow = table.insertRow();
+
+            // Inserta celdas en la nueva fila
+            newRow.insertCell(0).textContent = productName;
+            newRow.insertCell(1).textContent = productPrice.toFixed(2);
+            newRow.insertCell(2).textContent = discount.toFixed(2);
+            newRow.insertCell(3).textContent = total.toFixed(2);
+
+            // Limpia el formulario
+            document.getElementById('productForm').reset();
+        });
+    </script>
+</body>
+</html>

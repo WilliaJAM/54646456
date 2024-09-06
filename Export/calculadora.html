@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Gameboy Advance</title>
+    <style>
+        body {
+            background-color: #92A644; 
+            font-family: 'Press Start 2P', cursive; 
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            padding: 20px;
+        }
+        h1 {
+            color: #FFFFFF; 
+        }
+    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press+Start+2P">
+</head>
+<body>
+    <div class="container">
+        <h1>Primer Juegardo (Va a ser muy lineal XD) </h1>
+    <br>
+    <button onclick="iniciar()"><center>Iniciar</center></button><br>
+    <br>
+    <button onclick="link()"><center>No clicear</center></button>
+    <h2>No apto para sensibles.</h2><br>
+    <br>
+    <h2 id="sensibity"></h2>
+    <div class="position-absolute bottom-0 end-0">
+        <button id="mostrarGif">Trans?</button>
+    </div>
+    <div class="position-absolute bottom-0 start-0">
+        <button onclick=" xd()">Boton Muy XD</button><br>
+        <br>
+        <button onclick="  mostrarMelo()">No clickear >:v</button>
+
+    </div>
+    
+    <img id="gif" src="" >
+        <img id="gifSrc" src="https://i.gifer.com/origin/b2/b26dc591c3aacf3cd904630ac3aef5dc_w200.gif" style="display:none;">
+    <h3 id="hola"><center></center></h3>
+</body>
+<script src="calculadora.js"></script>
+</html>

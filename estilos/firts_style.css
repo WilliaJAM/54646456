@@ -1,0 +1,29 @@
+
+p  .diferentColor{ /* ejemplo de lo menciada a bajo */
+    color: red;
+}
+/* p  es la etiqueta donde se encuetra el elemento | a  esta alamacenado en p osea
+buscara a en p, la etiqueta que se quiere encontrar y donde se encuetra y solo afecta a esa no al resto si se pone un
+class en vario en otras partes solo afecta a la especificada. solo se pone dos donde se encuentra y la que se quiere cambiar nada mas.
+{ ejemplo de un selector el ultimo es el que se va encontrar, se empiza con el elemento donde se almacena dicho elemento especifico sin afectar el resto.
+(solo afecta a los que estan dentro del especificado)
+    background-color: gray;
+    padding: 20px;
+    text-justify: auto;
+} */
+ /* header{ selector normal
+
+ } */
+  /* *{selector universal no se usa mucho, solo como para quitar o dar margen a los elementos no es muy comun
+
+  } */
+p a {
+    color: green;
+}
+/*ejemplo con un link especifico que solo cambie a los que poseen el mismo link*/
+p [href="http://google.com"]{
+    color: rgb(0, 53, 214);
+}
+h1, h2, h3, h4, h5 {
+    /*ejemplo de selector en grupo*/
+}

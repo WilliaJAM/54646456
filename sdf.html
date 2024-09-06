@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validación de Usuarios</title>
+    <style>
+        table {
+            width: 50%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>Validación de Usuarios</h1>
+    <label for="cedula">Cédula:</label>
+    <input type="text" id="cedula">
+    <button onclick="validarUsuario()">Validar Usuario</button>
+ 
+    <h2>Resumen de Registros</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Cédula</th>
+                <th>Nombre</th>
+                <th>Teléfono</th>
+                <th>Edad</th>
+                <th>Estado</th>
+            </tr>
+        </thead>
+        <tbody id="tablaRegistros">
+        </tbody>
+    </table>
+ 
+    <p id="resumen"></p>
+ 
+    <script src="./ejercicio_1.js"></script>
+</body>
+</html>

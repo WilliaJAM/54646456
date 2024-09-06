@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Nose</h1>
+    <div id="subtitulo"></div>
+    <p>1. Hola com esta</p>
+    <p id="parrafo2">2. Comia</p>
+    <p>3.alsdjasdasdasda</p>
+    <script>
+        //Crear el elemento
+        let elemento = document.createElement("h1");
+        //Crear un nodo de texto
+        let contenido = document.createTextNode("Este es mi primera vez");
+        //Añadir el nodo de texto al elemento
+        elemento.appendChild(contenido);
+        //Agregar atributos al elemento
+        elemento.setAttribute("align", "center");
+        //Agregar el elemento al documento
+        document.getElementById("subtitulo").appendChild(elemento);
+        //Forma para ponerlo a lo ultimo
+        document.body.appendChild(elemento);
+        //lo que esta pasando es que appendChild() lo que hace es como unir
+        // es como una especie de concatenacion osea el ejemplo e añadir el nodo de texto al 
+        //elemento se ve que append une y crea el nodo con es contendio.
+        
+    
+    
+    </script>
+</body>
+</html>

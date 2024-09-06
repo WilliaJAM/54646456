@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <!-- <button type="button" id="verCookies">Ver todas Cookie</button>
+   <button type="button" id="crearCookie1">Crear Cookie</button>
+   <button type="button" id="crearCookie2">Crear Cookie</button>
+   <button type="button" id="borrarCookie1">Borrar Cookie</button>
+   <button type="button" id="borrarCookie2">Borrar Cookie</button> -->
+   <div id="elements">
+
+   </div>
+</body>
+<script>
+  //como crear y modificar una cookie
+  //Crear una cookie
+  // document.cookie = "usuario=Mi píja";
+  // document.cookie = "hola = tonotos";
+
+  // //Modificar una cookie
+
+  // document.cookie = "hola = Pene Grande";
+
+  //Borrar una cookie
+  // document.cookie = "usuario=; expires = Thu 01 Jan 1970 00:00:01 GMT";
+  // document.cookie = "hola =; expires = Thu 01 Jan 1970 00:00:01 GMT";
+//Ejemplo usando cookie
+  // document.getElementById("verCookies").addEventListener("click",verCookies)
+  // document.getElementById("crearCookie1").addEventListener("click",crearCookie)
+  // document.getElementById("crearCookie2").addEventListener("click",crearCookie)
+  // document.getElementById("borrarCookie1").addEventListener("click",borrarCookie)
+  // document.getElementById("borrarCookie2").addEventListener("click",borrarCookie)
+
+  // function verCookies() {
+  //   alert(document.cookie);
+  
+  // }
+
+  // function crearCookie(e) {
+  //   if (!e) e = window.event;
+  //   if (e.target.id=="crearCookie1")
+  //   document.cookie  = "nombre = William";
+  // else if (e.target.id == "crearCookie2");
+  //     document.cookie = "apellido = Marinez"
+  //   }
+  //   function borrarCookie(e) {
+  //   if (!e) e = window.event;
+  //   if (e.target.id=="borrarCookie1")
+  //   document.cookie  = "nombre =; expires = Thu 01 Jan 1970 00:00:00 GMT";
+  // else if (e.target.id == "borrarCookie2");
+  //     document.cookie = "apellido =; expires = Thu 01 Jan 1970 00:00:00 GMT"
+  //   }
+//Usando localStorage (almacena cuando aun asi se cierra guarda los datos)
+//Primera practica se crea asi de esta manera y se pone setItem
+//Y para llamarla se crea otra paresida solo que se pone getItem
+// localStorage.setItem("pato","lucas");
+// console.log(localStorage.getItem("pato"));
+//2
+// localStorage.setItem("Nombre", "William");
+// console.log(localStorage.getItem("Nombre"));
+
+//ejemplo
+// lst = [{
+//   name : "William",
+//   age :1
+// },{
+//   name : "Pene",
+//   age : 40
+// }];
+
+// localStorage.setItem("List",JSON.stringify(lst));
+// lst = JSON.parse(localStorage.getItem("List"));
+// lst.forEach(element => {
+//   let elements = document.getElementById("elements");
+//   let div = document.createElement("div");
+//   div.innerHTML = elements.name + " " + elements.age;
+//   elements.appendChild(div);
+// });
+
+//Usando sessionStorage(el sessionEstorage almacena datos minetras se este usando la venta cuando se cierra pailas se va)
+// sessionStorage.setItem("Nombre", "SkibidiToiletBananinPisosPicadosFernanfloo");
+// sessionStorage.setItem("Nombre2", "SigmaChibiasdadasdasd");
+// let nombre = sessionStorage.getItem("Nombre")
+// let nombre2 = sessionStorage.getItem("Nombre2")
+//para eliminar la sessionEstorage es asi:
+// sessionStorage.removeItem("Nombre2")
+// console.log(nombre);
+// console.log(sessionStorage.removeItem("Nombre2"));
+//Aqui me dira si el sessionEstorage existe con un nombre ya usado me dira el if osea cuando me mande true y si no existe me dira el else (algo curioso cuando puse el 
+// Nombre2 me dio el else por que yo tengo aqui el removeItem cuante que no existe aunque lo tenga aqui el removeItem no lo deja).
+// if (sessionStorage.hasOwnProperty("Nombre")){
+// alert("Este toilet ya es existente")
+// }else{
+//   alert("Toilet fue skibidi")
+// }
+//para hacer un insta delete se usa clear() eje: sessionEstorage.clear()
+
+
+</script>
+</html>

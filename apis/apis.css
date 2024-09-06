@@ -1,0 +1,27 @@
+.consulta{
+    width: 800px;
+    text-align: center;
+    padding: 10px;
+    margin: 200px auto;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+}
+#buscador{
+    width: 400px;
+    margin:30px auto;
+
+}
+.title{
+    margin: 30px;
+}
+#imagen{
+    width: 200px; 
+    height: 200px;
+}
+#todo{
+    background-image: url('https://i.pinimg.com/originals/49/fe/c8/49fec86beb14058b401afddf41d12877.jpg');
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+    
+}

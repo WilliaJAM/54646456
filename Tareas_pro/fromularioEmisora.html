@@ -1,0 +1,88 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Encuestados</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <h1>Registro de Encuestados de la emisora</h1>
+
+
+    <button type="button" class="btn btn-secondary" onclick="agregarPersona()">Agregar Persona</button>
+    <button type="button" class="btn btn-success" onclick="mostrarInformacion()">Mostrar Información</button>
+
+    <div id="output"></div>
+
+    <script>
+        // Vector para almacenar datos de las personas
+        let personas = [];
+
+        // Función para agregar una persona
+        function agregarPersona() {
+            let nombre = prompt("Ingrese el nombre:");
+            let cedula = prompt("Ingrese el número de identificación (cédula):");
+            let fechaNacimiento = prompt("Ingrese la fecha de nacimiento (YYYY-MM-DD):");
+            let correo = prompt("Ingrese el correo electrónico:");
+            let ciudadResidencia = prompt("Ingrese la ciudad de residencia:");
+            let ciudadOrigen = prompt("Ingrese la ciudad de origen:");
+            
+            // Máximo 3 canciones favoritas por persona
+            let canciones = [];
+            for (let i = 0; i < 3; i++) {
+                let artista = prompt(`Ingrese el artista de la canción ${i + 1}:`);
+                let titulo = prompt(`Ingrese el título de la canción ${i + 1}:`);
+                canciones.push({ artista, titulo });
+            }
+
+            // Objeto persona con los datos ingresados
+            let persona = {
+                nombre,
+                cedula,
+                fechaNacimiento,
+                correo,
+                ciudadResidencia,
+                ciudadOrigen,
+                canciones
+            };
+
+            // Agregar persona al vector
+            personas.push(persona);
+        }
+
+        // Función para mostrar la información personal de una persona por posición
+        function mostrarInformacion() {
+            let posicion = prompt("Ingrese la posición de la persona (1 - " + personas.length + "):");
+            let index = parseInt(posicion) - 1;
+
+            if (index >= 0 && index < personas.length) {
+                let persona = personas[index];
+                let infoHTML = `
+                    <h2>Información de la Persona ${posicion}</h2>
+                    <p><strong>Nombre:</strong> ${persona.nombre}</p>
+                    <p><strong>Cédula:</strong> ${persona.cedula}</p>
+                    <p><strong>Fecha de Nacimiento:</strong> ${persona.fechaNacimiento}</p>
+                    <p><strong>Correo Electrónico:</strong> ${persona.correo}</p>
+                    <p><strong>Ciudad de Residencia:</strong> ${persona.ciudadResidencia}</p>
+                    <p><strong>Ciudad de Origen:</strong> ${persona.ciudadOrigen}</p>
+                    <h3>Canciones Favoritas:</h3>
+                `;
+
+                // Mostrar lista de canciones favoritas
+                persona.canciones.forEach((cancion, i) => {
+                    infoHTML += `
+                        <p><strong>Canción ${i + 1}:</strong> ${cancion.titulo} - ${cancion.artista}</p>
+                    `;
+                });
+
+                document.getElementById("output").innerHTML = infoHTML;
+            } else {
+                alert("La posición ingresada es inválida.");
+            }
+        }
+    </script>
+</body>
+</html>

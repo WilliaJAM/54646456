@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Ejemplo</h1>
+    <button id="boton">cargar</button>
+    <div id="respuesta">aca va la respuesta</div>
+</body>
+<script>
+    // var ajax = new XMLHttpRequest ();
+    // ajax.open('GET', 'ajax.php', true);
+    // ajax.onreadystatechange = function() {
+    //     if (ajax.readyState == 4) {
+    //         document.querySelector('#respuesta').innerHTML= ajax.responseText;
+            
+    //     }else{
+    //         document.querySelector('#respuesta').innerHTML='espere...'
+    //     }
+    // }
+    //_________________________________________________
+    // Usando ajax desde cero javascript
+    function ajax() {
+        const http = new XMLHttpRequest ();
+        const url = 
+        http.onreadystatechange = function () {
+            if (this.readyState === 4 && this.status === 200) {
+                console.log(this.responseText);
+                document.getElementById("respuesta").innerHTML = this.responseText;
+            }else {
+                alert("error")
+            }
+        }
+        http.open("GET", url, true);
+        http.send();
+    }
+    document.getElementById("boton").addEventListener("click", function () {
+        ajax();
+    })
+
+   
+</script>
+</html>
